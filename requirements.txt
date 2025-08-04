@@ -1,0 +1,22 @@
+# Core dependencies for SmartDoctors RAG system
+
+# Data generation
+faker==24.4.0
+
+# Embeddings and ML
+sentence-transformers==2.5.1
+
+# Vector database
+chromadb==0.4.22
+
+# API framework
+fastapi==0.110.0
+uvicorn==0.27.1
+pydantic==2.6.3
+
+# LLM integration (for later phases)
+openai==1.14.0
+
+# Utilities
+python-dotenv==1.0.1
+tqdm==4.66.2

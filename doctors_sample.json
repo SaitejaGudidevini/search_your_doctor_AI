@@ -1,0 +1,153 @@
+[
+  {
+    "doctor_id": "DOC-00001",
+    "name": "Dr. Melissa Smith",
+    "primary_specialty": "Obstetrics and Gynecology",
+    "sub_specialty": "Maternal-Fetal Medicine",
+    "location": "Atlanta, GA",
+    "hospital_affiliation": "Grady Memorial Hospital",
+    "years_of_experience": 9,
+    "language_fluency": [
+      "English",
+      "Mandarin"
+    ],
+    "critical_surgeries_summary": "Dr. Smith has led maternal-fetal medicine unit managing 300+ cases of pregnancy complications. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced maternal-fetal medicine techniques.",
+    "special_interests_and_expertise": "Pioneer in non-invasive prenatal testing implementation. Led adoption achieving 99% accuracy for common chromosomal abnormalities."
+  },
+  {
+    "doctor_id": "DOC-00002",
+    "name": "Dr. James Collins MD",
+    "primary_specialty": "Neurology",
+    "sub_specialty": "Epilepsy",
+    "location": "Boston, MA",
+    "hospital_affiliation": "Dana-Farber Cancer Institute",
+    "years_of_experience": 27,
+    "language_fluency": [
+      "English",
+      "Russian"
+    ],
+    "critical_surgeries_summary": "Dr. MD has led movement disorders clinic treating 500+ Parkinson's disease patients with DBS referrals. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced epilepsy techniques.",
+    "special_interests_and_expertise": "Focused on neuromuscular disease genetic testing and counseling. Diagnosed 100+ rare genetic conditions using advanced sequencing."
+  },
+  {
+    "doctor_id": "DOC-00003",
+    "name": "Dr. Sean Mejia",
+    "primary_specialty": "Neurology",
+    "sub_specialty": "Movement Disorders",
+    "location": "Miami, FL",
+    "hospital_affiliation": "Baptist Hospital of Miami",
+    "years_of_experience": 7,
+    "language_fluency": [
+      "English",
+      "Spanish"
+    ],
+    "critical_surgeries_summary": "Dr. Mejia has managed over 1000 stroke patients with rapid thrombolysis protocols improving outcomes by 40%. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced movement disorders techniques.",
+    "special_interests_and_expertise": "Special interest in autoimmune neurological disorders. Developed rapid diagnosis protocols reducing treatment delays by 50%."
+  },
+  {
+    "doctor_id": "DOC-00004",
+    "name": "Dr. Patrick Pittman",
+    "primary_specialty": "Dermatology",
+    "sub_specialty": "Mohs Surgery",
+    "location": "New York, NY",
+    "hospital_affiliation": "Weill Cornell Medical Center",
+    "years_of_experience": 31,
+    "language_fluency": [
+      "English",
+      "French"
+    ],
+    "critical_surgeries_summary": "Dr. Pittman has pioneered combination therapy approaches for 200+ melanoma patients. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced mohs surgery techniques.",
+    "special_interests_and_expertise": "Special focus on pediatric vascular anomalies. Established multidisciplinary clinic treating 300+ complex cases annually."
+  },
+  {
+    "doctor_id": "DOC-00005",
+    "name": "Dr. Jody Smith",
+    "primary_specialty": "Urology",
+    "sub_specialty": "Kidney Stone Disease",
+    "location": "San Francisco, CA",
+    "hospital_affiliation": "Zuckerberg San Francisco General Hospital",
+    "years_of_experience": 27,
+    "language_fluency": [
+      "English",
+      "French"
+    ],
+    "critical_surgeries_summary": "Dr. Smith has pioneered laser enucleation techniques for benign prostatic hyperplasia with 300+ procedures. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced kidney stone disease techniques.",
+    "special_interests_and_expertise": "Special interest in female pelvic medicine and reconstruction. Developed minimally invasive techniques for complex pelvic organ prolapse."
+  },
+  {
+    "doctor_id": "DOC-00006",
+    "name": "Dr. Kathryn Kim",
+    "primary_specialty": "Dermatology",
+    "sub_specialty": "Dermatopathology",
+    "location": "Chicago, IL",
+    "hospital_affiliation": "University of Chicago Medical Center",
+    "years_of_experience": 10,
+    "language_fluency": [
+      "English",
+      "French"
+    ],
+    "critical_surgeries_summary": "Dr. Kim has completed 500+ complex reconstructions following skin cancer removal. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced dermatopathology techniques.",
+    "special_interests_and_expertise": "Leading researcher in psoriasis pathogenesis and treatment. Principal investigator for novel biologic therapies achieving PASI 90 in 70% of patients."
+  },
+  {
+    "doctor_id": "DOC-00007",
+    "name": "Dr. Dr. Steven Barnes",
+    "primary_specialty": "Neurology",
+    "sub_specialty": "Multiple Sclerosis",
+    "location": "Houston, TX",
+    "hospital_affiliation": "Texas Children's Hospital",
+    "years_of_experience": 29,
+    "language_fluency": [
+      "English",
+      "Portuguese"
+    ],
+    "critical_surgeries_summary": "Dr. Barnes has specialized in neuromuscular diseases diagnosing and treating 300+ rare disorder cases. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced multiple sclerosis techniques.",
+    "special_interests_and_expertise": "Focused on neuromuscular disease genetic testing and counseling. Diagnosed 100+ rare genetic conditions using advanced sequencing."
+  },
+  {
+    "doctor_id": "DOC-00008",
+    "name": "Dr. Victoria Lawson",
+    "primary_specialty": "Urology",
+    "sub_specialty": "Pediatric Urology",
+    "location": "Chicago, IL",
+    "hospital_affiliation": "Rush University Medical Center",
+    "years_of_experience": 28,
+    "language_fluency": [
+      "English",
+      "Mandarin"
+    ],
+    "critical_surgeries_summary": "Dr. Lawson has completed 300+ kidney stone procedures including complex percutaneous nephrolithotomy. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced pediatric urology techniques.",
+    "special_interests_and_expertise": "Focused on pediatric urology and hypospadias outcomes. Achieved single-stage repair success in 95% of cases."
+  },
+  {
+    "doctor_id": "DOC-00009",
+    "name": "Dr. Sarah Cabrera",
+    "primary_specialty": "Obstetrics and Gynecology",
+    "sub_specialty": "Maternal-Fetal Medicine",
+    "location": "New York, NY",
+    "hospital_affiliation": "Columbia University Medical Center",
+    "years_of_experience": 5,
+    "language_fluency": [
+      "English",
+      "Spanish",
+      "Portuguese"
+    ],
+    "critical_surgeries_summary": "Dr. Cabrera has performed 500+ minimally invasive hysterectomies with reduced recovery times. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced maternal-fetal medicine techniques.",
+    "special_interests_and_expertise": "Focused on global maternal health and reducing mortality. Implemented protocols in resource-limited settings saving 200+ lives annually."
+  },
+  {
+    "doctor_id": "DOC-00010",
+    "name": "Dr. Jessica Thompson",
+    "primary_specialty": "Oncology",
+    "sub_specialty": "Surgical Oncology",
+    "location": "Miami, FL",
+    "hospital_affiliation": "Nicklaus Children's Hospital",
+    "years_of_experience": 24,
+    "language_fluency": [
+      "English",
+      "Spanish"
+    ],
+    "critical_surgeries_summary": "Dr. Thompson has specialized in stereotactic radiosurgery with 500+ treatments for brain and spine metastases. Maintains active involvement in clinical research and medical education, mentoring residents and fellows in advanced surgical oncology techniques.",
+    "special_interests_and_expertise": "Expertise in CAR-T cell therapy for hematologic malignancies. Achieved complete remission in 60% of refractory lymphoma cases."
+  }
+]
