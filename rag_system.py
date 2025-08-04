@@ -68,14 +68,21 @@ class SmartDoctorsRAG:
         self.collection = self.chroma_client.get_collection(name=COLLECTION_NAME)
         
         # Initialize LLM
-        self.use_openai = use_openai
-        if use_openai:
-            # Make sure to set OPENAI_API_KEY in your .env file
-            self.llm_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-            self.model_name = "gpt-3.5-turbo"  # or "gpt-4" for better quality
+        self.use_openai = use_openai and os.getenv("OPENAI_API_KEY") is not None
+        if self.use_openai:
+            try:
+                # Make sure to set OPENAI_API_KEY in your .env file
+                self.llm_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+                self.model_name = "gpt-3.5-turbo"  # or "gpt-4" for better quality
+                print("OpenAI LLM initialized successfully")
+            except Exception as e:
+                print(f"Failed to initialize OpenAI: {e}")
+                self.use_openai = False
+                self.llm_client = None
         else:
             # For now, we'll just use OpenAI. You can add other LLMs here
-            print("Note: Currently only OpenAI is supported. Set use_openai=True")
+            print("Running without LLM - will use vector search only")
+            self.llm_client = None
     
     def search_doctors(
         self, 
@@ -113,24 +120,34 @@ class SmartDoctorsRAG:
         
         # Convert to SearchResult objects
         search_results = []
-        for i in range(len(results['ids'][0])):
-            metadata = results['metadatas'][0][i]
-            distance = results['distances'][0][i]
+        
+        # Check if we have results
+        if not results['ids'] or not results['ids'][0]:
+            print(f"No results found for query: {query}")
+            return search_results
             
-            result = SearchResult(
-                doctor_id=metadata['doctor_id'],
-                name=metadata['name'],
-                specialty=metadata['primary_specialty'],
-                sub_specialty=metadata['sub_specialty'],
-                location=metadata['location'],
-                hospital=metadata['hospital_affiliation'],
-                experience=metadata['years_of_experience'],
-                languages=metadata['languages'],
-                surgeries_summary=metadata['surgeries_summary'],
-                expertise=metadata['expertise'],
-                similarity_score=1 - distance  # Convert distance to similarity
-            )
-            search_results.append(result)
+        for i in range(len(results['ids'][0])):
+            try:
+                metadata = results['metadatas'][0][i]
+                distance = results['distances'][0][i]
+                
+                result = SearchResult(
+                    doctor_id=metadata.get('doctor_id', 'Unknown'),
+                    name=metadata.get('name', 'Unknown Doctor'),
+                    specialty=metadata.get('primary_specialty', 'General'),
+                    sub_specialty=metadata.get('sub_specialty', 'General'),
+                    location=metadata.get('location', 'Unknown'),
+                    hospital=metadata.get('hospital_affiliation', 'Unknown Hospital'),
+                    experience=metadata.get('years_of_experience', 0),
+                    languages=metadata.get('languages', 'English'),
+                    surgeries_summary=metadata.get('surgeries_summary', ''),
+                    expertise=metadata.get('expertise', ''),
+                    similarity_score=1 - distance  # Convert distance to similarity
+                )
+                search_results.append(result)
+            except Exception as e:
+                print(f"Error processing result {i}: {e}")
+                continue
         
         return search_results
     
@@ -151,11 +168,28 @@ class SmartDoctorsRAG:
         Returns:
             Dictionary with recommendation and explanation
         """
-        if not self.use_openai:
+        if not self.use_openai or self.llm_client is None:
+            # Provide a helpful explanation without LLM
+            top_result = search_results[0] if search_results else None
+            explanation = ""
+            
+            if top_result:
+                explanation = f"Based on your symptoms, {top_result.name} appears to be a strong match. "
+                explanation += f"This doctor specializes in {top_result.specialty} with a focus on {top_result.sub_specialty}. "
+                explanation += f"Located at {top_result.hospital} in {top_result.location}, "
+                explanation += f"Dr. {top_result.name.split()[-1]} has {top_result.experience} years of experience. "
+                explanation += f"\n\nMatch Score: {top_result.similarity_score:.0%}"
+                explanation += "\n\nNote: This recommendation is based on keyword matching. For more detailed analysis, an AI model would be needed."
+            
             return {
-                "recommendation": search_results[0].to_dict() if search_results else None,
-                "explanation": "LLM not configured. Returning top vector search result.",
-                "alternative_options": [r.to_dict() for r in search_results[1:3]] if len(search_results) > 1 else []
+                "recommendation": top_result.to_dict() if top_result else None,
+                "explanation": explanation,
+                "alternative_options": [r.to_dict() for r in search_results[1:3]] if len(search_results) > 1 else [],
+                "search_metadata": {
+                    "total_results": len(search_results),
+                    "query": patient_query,
+                    "model_used": "vector_search_only"
+                }
             }
         
         # Prepare doctor profiles for the prompt

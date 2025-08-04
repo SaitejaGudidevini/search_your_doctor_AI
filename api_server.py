@@ -6,6 +6,8 @@ Provides REST API endpoints for doctor recommendations
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 from typing import Optional, List, Dict, Any
 import uvicorn
@@ -35,6 +37,9 @@ app.add_middleware(
 # Initialize RAG system
 use_llm = os.getenv("OPENAI_API_KEY") is not None
 rag_system = SmartDoctorsRAG(use_openai=use_llm)
+
+# Mount static files
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Pydantic models for request/response
 class PatientQuery(BaseModel):
@@ -69,8 +74,13 @@ class HealthCheck(BaseModel):
     message: str
 
 # API Endpoints
-@app.get("/", response_model=HealthCheck)
-async def root():
+@app.get("/")
+async def serve_frontend():
+    """Serve the frontend HTML"""
+    return FileResponse('static/index.html')
+
+@app.get("/health", response_model=HealthCheck)
+async def health_check():
     """Health check endpoint"""
     return {
         "status": "healthy",
