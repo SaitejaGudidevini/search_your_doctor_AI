@@ -64,7 +64,7 @@ class DoctorInfo(BaseModel):
 class RecommendationResponse(BaseModel):
     success: bool
     recommendation: Optional[Dict[str, Any]]
-    message: Optional[str]
+    message: Optional[str] = None
     timestamp: str
 
 class HealthCheck(BaseModel):

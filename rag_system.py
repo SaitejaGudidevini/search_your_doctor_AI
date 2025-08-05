@@ -142,7 +142,7 @@ class SmartDoctorsRAG:
                     languages=metadata.get('languages', 'English'),
                     surgeries_summary=metadata.get('surgeries_summary', ''),
                     expertise=metadata.get('expertise', ''),
-                    similarity_score=1 - distance  # Convert distance to similarity
+                    similarity_score=max(0, 1 - distance)  # Convert distance to similarity (ensure non-negative)
                 )
                 search_results.append(result)
             except Exception as e:
