@@ -60,23 +60,36 @@ class SmartDoctorsRAG:
         # Load embedding model
         self.embedding_model = SentenceTransformer(EMBEDDING_MODEL)
         
-        # Initialize ChromaDB
+        # Initialize ChromaDB with error handling
         self.chroma_client = chromadb.PersistentClient(
             path=CHROMA_PERSIST_DIR,
             settings=Settings(anonymized_telemetry=False)
         )
-        self.collection = self.chroma_client.get_collection(name=COLLECTION_NAME)
+        
+        # Try to get collection, handle schema errors
+        try:
+            self.collection = self.chroma_client.get_collection(name=COLLECTION_NAME)
+        except Exception as e:
+            print(f"Error accessing collection: {e}")
+            print("Please run 'python create_embeddings.py' to recreate the collection")
+            raise RuntimeError(
+                "ChromaDB collection not found or has schema issues. "
+                "Please run 'python create_embeddings.py' to initialize the database."
+            )
         
         # Initialize LLM
-        self.use_openai = use_openai and os.getenv("OPENAI_API_KEY") is not None
+        api_key = os.getenv("OPENAI_API_KEY")
+        self.use_openai = use_openai and api_key is not None and api_key.strip() != ""
+        
         if self.use_openai:
             try:
                 # Make sure to set OPENAI_API_KEY in your .env file
-                self.llm_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+                self.llm_client = OpenAI(api_key=api_key)
                 self.model_name = "gpt-3.5-turbo"  # or "gpt-4" for better quality
                 print("OpenAI LLM initialized successfully")
             except Exception as e:
-                print(f"Failed to initialize OpenAI: {e}")
+                print(f"Note: OpenAI not initialized - {e}")
+                print("Running in vector search only mode")
                 self.use_openai = False
                 self.llm_client = None
         else:
@@ -131,6 +144,10 @@ class SmartDoctorsRAG:
                 metadata = results['metadatas'][0][i]
                 distance = results['distances'][0][i]
                 
+                # ChromaDB distances are typically between 0 and 2 for cosine similarity
+                # Convert to a 0-1 similarity score
+                similarity = max(0, min(1, 1 - (distance / 2)))
+                
                 result = SearchResult(
                     doctor_id=metadata.get('doctor_id', 'Unknown'),
                     name=metadata.get('name', 'Unknown Doctor'),
@@ -142,7 +159,7 @@ class SmartDoctorsRAG:
                     languages=metadata.get('languages', 'English'),
                     surgeries_summary=metadata.get('surgeries_summary', ''),
                     expertise=metadata.get('expertise', ''),
-                    similarity_score=max(0, 1 - distance)  # Convert distance to similarity (ensure non-negative)
+                    similarity_score=similarity
                 )
                 search_results.append(result)
             except Exception as e:
@@ -301,10 +318,12 @@ Please provide:
         print("Generating personalized recommendation...")
         recommendation = self.generate_recommendation(query, search_results)
         
+        from datetime import datetime
+        
         return {
             "success": True,
             "recommendation": recommendation,
-            "timestamp": str(os.popen('date').read().strip())
+            "timestamp": datetime.now().isoformat()
         }
 
 def main():
@@ -334,7 +353,7 @@ def main():
             "location": "Boston, MA"
         },
         {
-            "query": "I need a neurosurgeon for my back pain that radiates down my leg. I've tried physical therapy but it's getting worse.",
+            "query": "I have a heart attack and need a doctor who can help me",
             "location": None  # No location filter
         }
     ]

@@ -6,6 +6,7 @@ Creates vector embeddings for doctor profiles and stores them in ChromaDB
 
 import json
 import os
+import shutil
 from typing import List, Dict, Any
 from tqdm import tqdm
 import chromadb
@@ -36,16 +37,48 @@ class DoctorEmbeddingPipeline:
             settings=Settings(anonymized_telemetry=False)
         )
         
-        # Create or get collection
+        # Create or get collection with proper error handling
         try:
+            # Try to get existing collection first
+            self.collection = self.chroma_client.get_collection(name=COLLECTION_NAME)
+            print(f"Using existing collection: {COLLECTION_NAME}")
+            print(f"  Collection has {self.collection.count()} items")
+        except Exception as e:
+            # If collection doesn't exist or has schema issues, handle it
+            print(f"Collection issue detected: {str(e)[:100]}")
+            
+            # Check if it's a schema issue
+            if "no such column" in str(e):
+                print("Schema mismatch detected. Recreating database...")
+                # Remove the entire database directory for a clean start
+                try:
+                    if os.path.exists(CHROMA_PERSIST_DIR):
+                        shutil.rmtree(CHROMA_PERSIST_DIR)
+                        print(f"Removed old database at {CHROMA_PERSIST_DIR}")
+                except Exception as rm_err:
+                    print(f"Warning: Could not remove old database: {rm_err}")
+                    # Try to at least remove the SQLite file
+                    try:
+                        db_file = os.path.join(CHROMA_PERSIST_DIR, "chroma.sqlite3")
+                        if os.path.exists(db_file):
+                            os.remove(db_file)
+                            print(f"Removed SQLite file: {db_file}")
+                    except:
+                        pass
+                
+                # Recreate client with fresh database
+                os.makedirs(CHROMA_PERSIST_DIR, exist_ok=True)
+                self.chroma_client = chromadb.PersistentClient(
+                    path=CHROMA_PERSIST_DIR,
+                    settings=Settings(anonymized_telemetry=False)
+                )
+            
+            # Create new collection
             self.collection = self.chroma_client.create_collection(
                 name=COLLECTION_NAME,
                 metadata={"description": "Doctor profiles for SmartDoctors RAG system"}
             )
             print(f"Created new collection: {COLLECTION_NAME}")
-        except:
-            self.collection = self.chroma_client.get_collection(name=COLLECTION_NAME)
-            print(f"Using existing collection: {COLLECTION_NAME}")
     
     def create_embedding_text(self, doctor: Dict[str, Any]) -> str:
         """

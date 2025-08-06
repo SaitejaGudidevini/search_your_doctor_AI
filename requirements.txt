@@ -5,6 +5,7 @@ faker==24.4.0
 
 # Embeddings and ML
 sentence-transformers==2.5.1
+numpy<2.0.0  # Pin numpy below 2.0 for chromadb compatibility
 
 # Vector database
 chromadb==0.4.22
