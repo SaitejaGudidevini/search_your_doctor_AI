@@ -1,6 +1,6 @@
 // SmartDoctors Frontend Application
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = ''; // Works in all environments (local, Docker, Railway)
 
 // DOM Elements
 const searchForm = document.getElementById('searchForm');
