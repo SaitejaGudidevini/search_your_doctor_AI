@@ -18,6 +18,34 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+# Initialize data if needed
+def initialize_data():
+    """Initialize doctors data and embeddings if they don't exist"""
+    import subprocess
+    import sys
+    
+    # Check if doctors_data.json exists
+    if not os.path.exists("doctors_data.json"):
+        print("Generating doctors data...")
+        subprocess.run([sys.executable, "generate_doctor_data.py"], check=True)
+    
+    # Check if ChromaDB is initialized
+    try:
+        import chromadb
+        from chromadb.config import Settings
+        client = chromadb.PersistentClient(
+            path="./chroma_db",
+            settings=Settings(anonymized_telemetry=False)
+        )
+        collection = client.get_collection(name="doctors")
+        print(f"ChromaDB collection found with {collection.count()} items")
+    except Exception as e:
+        print(f"Initializing ChromaDB: {e}")
+        subprocess.run([sys.executable, "create_embeddings.py"], check=True)
+
+# Initialize data on startup
+initialize_data()
+
 # Initialize FastAPI app
 app = FastAPI(
     title="SmartDoctors API",
@@ -215,9 +243,12 @@ if __name__ == "__main__":
     print(f"API Documentation: http://localhost:{port}/docs")
     print(f"{'='*50}\n")
     
+    # Check if running in Docker
+    is_docker = os.path.exists("/.dockerenv") or os.getenv("DOCKER_CONTAINER") == "true"
+    
     uvicorn.run(
         "api_server:app",
         host="0.0.0.0",
         port=port,
-        reload=True
+        reload=not is_docker  # Disable reload in Docker
     )

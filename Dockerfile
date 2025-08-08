@@ -45,32 +45,10 @@ EXPOSE 8000
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 ENV TOKENIZERS_PARALLELISM=false
+ENV DOCKER_CONTAINER=true
 
-# Create a startup script with proper initialization order
-RUN echo '#!/bin/bash\n\
-set -e\n\
-\n\
-echo "=== SmartDoctors Docker Initialization ==="\n\
-\n\
-# Step 1: Pre-download the model by importing rag_system\n\
-echo "Step 1: Downloading and caching SentenceTransformer model..."\n\
-python -c "from sentence_transformers import SentenceTransformer; model = SentenceTransformer(\"sentence-transformers/all-MiniLM-L6-v2\"); print(\"Model downloaded successfully\")"\n\
-\n\
-# Step 2: Check if doctors_data.json exists\n\
-if [ ! -f "/app/doctors_data.json" ]; then\n\
-    echo "Step 2: Generating doctors data..."\n\
-    python generate_doctor_data.py\n\
-else\n\
-    echo "Step 2: doctors_data.json found"\n\
-fi\n\
-\n\
-# Step 3: Initialize ChromaDB with embeddings\n\
-echo "Step 3: Initializing ChromaDB..."\n\
-python create_embeddings.py\n\
-\n\
-# Step 4: Start the API server\n\
-echo "Step 4: Starting SmartDoctors API..."\n\
-python api_server.py' > /app/start.sh && chmod +x /app/start.sh
+# Pre-download the model during build to cache it
+RUN python -c "from sentence_transformers import SentenceTransformer; model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2'); print('Model cached in image')"
 
-# Run the application
-CMD ["/app/start.sh"]
+# Run the application directly
+CMD ["python", "api_server.py"]
