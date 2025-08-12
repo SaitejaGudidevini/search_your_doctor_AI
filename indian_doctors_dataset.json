@@ -1,422 +1,1242 @@
-w{
-  "metadata": {
-    "dataset_info": {
-      "title": "Indian Doctors Database - Free and Open Sources",
-      "description": "Comprehensive dataset of doctors in India compiled from government health directories, medical councils, and reputable medical institutions",
-      "version": "1.0",
-      "sources": [
-        "Postgraduate Institute of Medical Education and Research (PGIMER), Chandigarh",
-        "All India Institute of Medical Sciences (AIIMS), Delhi",
-        "Indian Orthopaedic Association (IOA)",
-        "Indian Academy of Pediatrics Neonatology Chapter",
-        "Delhi Medical Council",
-        "Maharashtra Medical Council",
-        "National Medical Register (NMR)",
-        "Open Government Data Platform India",
-        "Tata Memorial Hospital",
-        "Christian Medical College, Vellore",
-        "Apollo Hospitals",
-        "Narayana Health",
-        "Fortis Healthcare",
-        "Medanta - The Medicity"
-      ],
-      "total_entries": 20,
-      "compilation_date": "2025-08-06",
-      "privacy_compliance": "Data sourced from publicly available directories and official medical councils. Personal contact information excluded for privacy protection. All information is from public domain sources.",
-      "data_accuracy": "Information verified against official medical council registrations, institutional directories, and published profiles. Experience estimates based on career progression and institutional affiliations.",
-      "usage_terms": "This dataset is compiled from public sources for educational and research purposes. Users must comply with applicable privacy laws and institutional policies.",
-      "geographic_coverage": "Pan-India with focus on major medical institutions and government hospitals",
-      "specialties_covered": [
-        "Cardiology",
-        "Cardiovascular Surgery",
-        "Neurology",
-        "Neurosurgery",
-        "Oncology",
-        "Pediatrics",
-        "Gastroenterology",
-        "Endocrinology",
-        "Pulmonary Medicine",
-        "Nephrology",
-        "Hematology",
-        "Dermatology",
-        "Orthopedics",
-        "ENT Surgery",
-        "Psychiatry",
-        "Internal Medicine"
-      ]
-    },
-    "field_descriptions": {
-      "name": "Full name of the medical practitioner as listed in official directories",
-      "primary_specialty": "Main medical specialty or department affiliation",
-      "sub_specialty": "Specialized area within primary specialty",
-      "location": "Primary practice location with city and state",
-      "hospital_affiliation": "Primary hospital, medical college, or institution affiliation",
-      "years_of_experience": "Estimated years of active medical practice",
-      "language_fluency": "Languages spoken by the doctor for patient communication",
-      "critical_surgeries_summary": "Summary of major surgical procedures, case volume, and clinical experience",
-      "special_interests_and_expertise": "Areas of special clinical interest, research focus, and recognized expertise"
-    },
-    "data_quality_notes": {
-      "completeness": "90% of entries have all required fields populated",
-      "accuracy_validation": "Cross-referenced with multiple official sources where available",
-      "update_frequency": "Quarterly updates planned based on source availability",
-      "known_limitations": "Experience years are estimates; sub-specialties may overlap; some rural practitioners may be underrepresented"
-    }
+[
+  {
+    "doctor_id": "DOC-IND-001",
+    "name": "Dr. Sandeep Vaishya",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Gamma Knife Surgery, Brachial Plexus Surgery",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Fortis Memorial Research Institute",
+    "years_of_experience": 27,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Vaishya has performed over 15,000 successful neurosurgeries and treated patients from over 110 countries. Internationally acclaimed for expertise in brachial plexus injuries and pioneering Gamma Knife surgery in South Asia. Featured in Netflix documentary 'Rooting for Roona' for work in treating Hydrocephalus. Specializes in minimally invasive brain and spine surgery with image-guided neurosurgery techniques.",
+    "special_interests_and_expertise": "Pioneer in Gamma Knife Surgery in South Asia. Leading expert in Brachial Plexus Surgery with global recognition."
   },
-  "doctors": [
-    {
-      "name": "Dr. Yashpal Sharma",
-      "primary_specialty": "Cardiology",
-      "sub_specialty": "Interventional Cardiology",
-      "location": {
-        "city": "Chandigarh",
-        "state": "Chandigarh"
-      },
-      "hospital_affiliation": "Postgraduate Institute of Medical Education and Research (PGIMER)",
-      "years_of_experience": "20+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Punjabi"
-      ],
-      "critical_surgeries_summary": "Performed over 2000 cardiac catheterizations and angioplasties, specializing in complex coronary interventions and structural heart disease",
-      "special_interests_and_expertise": "Complex coronary interventions, transcatheter aortic valve replacement, cardiac electrophysiology"
-    },
-    {
-      "name": "Prof. Manoj Kumar Rohit",
-      "primary_specialty": "Cardiology",
-      "sub_specialty": "Clinical Cardiology",
-      "location": {
-        "city": "Chandigarh",
-        "state": "Chandigarh"
-      },
-      "hospital_affiliation": "Postgraduate Institute of Medical Education and Research (PGIMER)",
-      "years_of_experience": "25+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Extensive experience in cardiac catheterization, echocardiography, and management of heart failure cases",
-      "special_interests_and_expertise": "Heart failure management, echocardiography, preventive cardiology"
-    },
-    {
-      "name": "Prof. Sanjeev Handa",
-      "primary_specialty": "Dermatology",
-      "sub_specialty": "Dermatology, Venereology, and Leprology",
-      "location": {
-        "city": "Chandigarh",
-        "state": "Chandigarh"
-      },
-      "hospital_affiliation": "Postgraduate Institute of Medical Education and Research (PGIMER)",
-      "years_of_experience": "22+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Punjabi"
-      ],
-      "critical_surgeries_summary": "Performed numerous dermatological surgeries including skin cancer removal, reconstructive procedures, and cosmetic dermatology",
-      "special_interests_and_expertise": "Psoriasis, vitiligo, skin cancer, dermatopathology, pediatric dermatology"
-    },
-    {
-      "name": "Dr. Sanjay Bhadada",
-      "primary_specialty": "Endocrinology",
-      "sub_specialty": "Diabetes and Metabolic Disorders",
-      "location": {
-        "city": "Chandigarh",
-        "state": "Chandigarh"
-      },
-      "hospital_affiliation": "Postgraduate Institute of Medical Education and Research (PGIMER)",
-      "years_of_experience": "18+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Managed over 5000 complex endocrine cases including parathyroid surgeries, adrenal disorders, and diabetic complications",
-      "special_interests_and_expertise": "Diabetes mellitus, thyroid disorders, osteoporosis, pituitary diseases, adrenal disorders"
-    },
-    {
-      "name": "Dr. Randeep Guleria",
-      "primary_specialty": "Pulmonary Medicine",
-      "sub_specialty": "Critical Care Medicine",
-      "location": {
-        "city": "Delhi",
-        "state": "Delhi"
-      },
-      "hospital_affiliation": "All India Institute of Medical Sciences (AIIMS)",
-      "years_of_experience": "30+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Managed thousands of critically ill patients, performed numerous bronchoscopies and thoracoscopic procedures",
-      "special_interests_and_expertise": "Interstitial lung diseases, lung transplantation, critical care medicine, sleep disorders"
-    },
-    {
-      "name": "Dr. Vinod Paul",
-      "primary_specialty": "Pediatrics",
-      "sub_specialty": "Neonatology",
-      "location": {
-        "city": "Delhi",
-        "state": "Delhi"
-      },
-      "hospital_affiliation": "All India Institute of Medical Sciences (AIIMS)",
-      "years_of_experience": "35+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Managed over 10000 critically ill newborns, established multiple NICU protocols and procedures",
-      "special_interests_and_expertise": "Neonatal intensive care, pediatric nutrition, newborn screening, developmental pediatrics"
-    },
-    {
-      "name": "Dr. Devi Prasad Shetty",
-      "primary_specialty": "Cardiovascular Surgery",
-      "sub_specialty": "Cardiac Surgery",
-      "location": {
-        "city": "Bangalore",
-        "state": "Karnataka"
-      },
-      "hospital_affiliation": "Narayana Health",
-      "years_of_experience": "40+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Kannada"
-      ],
-      "critical_surgeries_summary": "Performed over 15000 cardiac surgeries including complex congenital heart repairs and heart transplants",
-      "special_interests_and_expertise": "Pediatric cardiac surgery, heart transplantation, minimally invasive cardiac surgery, telemedicine"
-    },
-    {
-      "name": "Dr. Suresh Advani",
-      "primary_specialty": "Medical Oncology",
-      "sub_specialty": "Hemato-Oncology",
-      "location": {
-        "city": "Mumbai",
-        "state": "Maharashtra"
-      },
-      "hospital_affiliation": "Tata Memorial Hospital",
-      "years_of_experience": "45+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Marathi"
-      ],
-      "critical_surgeries_summary": "Treated over 20000 cancer patients, pioneered several cancer treatment protocols in India",
-      "special_interests_and_expertise": "Lymphomas, leukemia, bone marrow transplantation, immunotherapy, precision oncology"
-    },
-    {
-      "name": "Dr. Ashok Seth",
-      "primary_specialty": "Cardiology",
-      "sub_specialty": "Interventional Cardiology",
-      "location": {
-        "city": "Delhi",
-        "state": "Delhi"
-      },
-      "hospital_affiliation": "Fortis Escorts Heart Institute",
-      "years_of_experience": "35+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Performed over 50000 cardiac interventions, pioneered several interventional techniques in India",
-      "special_interests_and_expertise": "Complex coronary interventions, structural heart disease, transcatheter valve procedures, cardiac imaging"
-    },
-    {
-      "name": "Dr. Trehan Naresh",
-      "primary_specialty": "Cardiovascular Surgery",
-      "sub_specialty": "Cardiac Surgery",
-      "location": {
-        "city": "Delhi",
-        "state": "Delhi"
-      },
-      "hospital_affiliation": "Medanta - The Medicity",
-      "years_of_experience": "40+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Performed over 48000 cardiac surgeries with exceptional outcomes, established multiple cardiac programs",
-      "special_interests_and_expertise": "Coronary artery bypass surgery, valve surgery, robotic cardiac surgery, off-pump surgery"
-    },
-    {
-      "name": "Dr. Prathap Reddy",
-      "primary_specialty": "Nephrology",
-      "sub_specialty": "Kidney Transplantation",
-      "location": {
-        "city": "Chennai",
-        "state": "Tamil Nadu"
-      },
-      "hospital_affiliation": "Apollo Hospitals",
-      "years_of_experience": "50+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Tamil",
-        "Telugu"
-      ],
-      "critical_surgeries_summary": "Established India's first successful kidney transplant program, mentored hundreds of nephrologists",
-      "special_interests_and_expertise": "Kidney transplantation, dialysis, chronic kidney disease, healthcare entrepreneurship"
-    },
-    {
-      "name": "Dr. Sudha Murthy",
-      "primary_specialty": "Internal Medicine",
-      "sub_specialty": "Geriatric Medicine",
-      "location": {
-        "city": "Bangalore",
-        "state": "Karnataka"
-      },
-      "hospital_affiliation": "Manipal Hospital",
-      "years_of_experience": "28+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Kannada",
-        "Marathi"
-      ],
-      "critical_surgeries_summary": "Managed complex geriatric cases, established geriatric care protocols, conducted extensive research",
-      "special_interests_and_expertise": "Geriatric medicine, age-related disorders, preventive medicine, healthcare philanthropy"
-    },
-    {
-      "name": "Dr. Raja Ramanna",
-      "primary_specialty": "Neurosurgery",
-      "sub_specialty": "Brain Tumor Surgery",
-      "location": {
-        "city": "Bangalore",
-        "state": "Karnataka"
-      },
-      "hospital_affiliation": "Nimhans",
-      "years_of_experience": "25+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Kannada"
-      ],
-      "critical_surgeries_summary": "Performed over 3000 brain surgeries, specialized in complex tumor removals and epilepsy surgery",
-      "special_interests_and_expertise": "Brain tumor surgery, epilepsy surgery, stereotactic surgery, neuro-oncology"
-    },
-    {
-      "name": "Dr. Harsh Vardhan",
-      "primary_specialty": "ENT Surgery",
-      "sub_specialty": "Head and Neck Surgery",
-      "location": {
-        "city": "Delhi",
-        "state": "Delhi"
-      },
-      "hospital_affiliation": "Maulana Azad Medical College",
-      "years_of_experience": "40+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Performed thousands of head and neck surgeries, established cancer screening programs",
-      "special_interests_and_expertise": "Head and neck oncology, laryngeal surgery, thyroid surgery, public health administration"
-    },
-    {
-      "name": "Dr. Shashank Joshi",
-      "primary_specialty": "Endocrinology",
-      "sub_specialty": "Diabetes and Obesity",
-      "location": {
-        "city": "Mumbai",
-        "state": "Maharashtra"
-      },
-      "hospital_affiliation": "Lilavati Hospital",
-      "years_of_experience": "30+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Marathi",
-        "Gujarati"
-      ],
-      "critical_surgeries_summary": "Managed over 15000 diabetes cases, established diabetes care protocols, conducted extensive research",
-      "special_interests_and_expertise": "Diabetes management, obesity treatment, metabolic surgery, diabetes technology"
-    },
-    {
-      "name": "Dr. Ravi Kant",
-      "primary_specialty": "Psychiatry",
-      "sub_specialty": "Addiction Medicine",
-      "location": {
-        "city": "Delhi",
-        "state": "Delhi"
-      },
-      "hospital_affiliation": "All India Institute of Medical Sciences (AIIMS)",
-      "years_of_experience": "25+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Treated thousands of patients with mental health disorders and addiction, established rehabilitation programs",
-      "special_interests_and_expertise": "Addiction medicine, substance abuse treatment, mental health policy, rehabilitation medicine"
-    },
-    {
-      "name": "Dr. Padma Srivastava",
-      "primary_specialty": "Neurology",
-      "sub_specialty": "Stroke Medicine",
-      "location": {
-        "city": "Delhi",
-        "state": "Delhi"
-      },
-      "hospital_affiliation": "All India Institute of Medical Sciences (AIIMS)",
-      "years_of_experience": "30+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Managed thousands of stroke patients, established stroke units, conducted pioneering research in neurology",
-      "special_interests_and_expertise": "Stroke medicine, cerebrovascular diseases, neurorehabilitation, telemedicine in neurology"
-    },
-    {
-      "name": "Dr. Mammen Chandy",
-      "primary_specialty": "Hematology",
-      "sub_specialty": "Bone Marrow Transplantation",
-      "location": {
-        "city": "Vellore",
-        "state": "Tamil Nadu"
-      },
-      "hospital_affiliation": "Christian Medical College",
-      "years_of_experience": "35+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Tamil",
-        "Malayalam"
-      ],
-      "critical_surgeries_summary": "Performed over 2000 bone marrow transplants, established India's largest BMT program",
-      "special_interests_and_expertise": "Bone marrow transplantation, leukemia treatment, thalassemia management, stem cell therapy"
-    },
-    {
-      "name": "Dr. Satish Jain",
-      "primary_specialty": "Gastroenterology",
-      "sub_specialty": "Therapeutic Endoscopy",
-      "location": {
-        "city": "Delhi",
-        "state": "Delhi"
-      },
-      "hospital_affiliation": "Lok Nayak Hospital",
-      "years_of_experience": "28+",
-      "language_fluency": [
-        "Hindi",
-        "English"
-      ],
-      "critical_surgeries_summary": "Performed thousands of endoscopic procedures, pioneered several therapeutic endoscopy techniques",
-      "special_interests_and_expertise": "Therapeutic endoscopy, ERCP procedures, pancreatic diseases, biliary disorders"
-    },
-    {
-      "name": "Dr. Yogesh Chawla",
-      "primary_specialty": "Hepatology",
-      "sub_specialty": "Liver Transplantation",
-      "location": {
-        "city": "Chandigarh",
-        "state": "Chandigarh"
-      },
-      "hospital_affiliation": "Postgraduate Institute of Medical Education and Research (PGIMER)",
-      "years_of_experience": "35+",
-      "language_fluency": [
-        "Hindi",
-        "English",
-        "Punjabi"
-      ],
-      "critical_surgeries_summary": "Established liver transplant program, performed hundreds of liver transplants, managed complex liver diseases",
-      "special_interests_and_expertise": "Liver transplantation, hepatitis management, cirrhosis treatment, hepatocellular carcinoma"
-    }
-  ]
-}
+  {
+    "doctor_id": "DOC-IND-002",
+    "name": "Dr. Rana Patir",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Skull Base Surgery, Pediatric Neurosurgery",
+    "location": "Gurugram, Haryana",
+    "hospital_affiliation": "Fortis Memorial Research Institute",
+    "years_of_experience": 32,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Patir has performed over 10,000 neurosurgical procedures with expertise in minimal invasive brain and spine surgery. Specializes in skull base surgery, neurovascular surgery, and extra cranial-intracranial bypass surgery. Fellowship trained from UK with extensive experience in complex pediatric neurosurgery and epilepsy surgery.",
+    "special_interests_and_expertise": "Expert in Minimal Invasive Brain and Spine Surgery. Specializes in complex Skull Base Surgery and Neurovascular procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-003",
+    "name": "Dr. Devi Prasad Shetty",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Pediatric Cardiac Surgery",
+    "location": "Bangalore, Karnataka",
+    "hospital_affiliation": "Narayana Health",
+    "years_of_experience": 45,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Kannada"
+    ],
+    "critical_surgeries_summary": "Dr. Shetty has performed over 100,000 heart operations and founded Narayana Health chain of 24 medical centers. Performed India's first neonatal heart surgery in 1992 on a 21-day-old baby. Served as personal physician to Mother Teresa after her heart attack. Currently performs over 30 surgeries daily with his team, focusing on affordable healthcare.",
+    "special_interests_and_expertise": "Pioneer in affordable cardiac care and high-volume surgery model. Expertise in pediatric cardiac surgery and complex congenital heart defects."
+  },
+  {
+    "doctor_id": "DOC-IND-004",
+    "name": "Dr. Naresh Trehan",
+    "primary_specialty": "Cardiovascular Surgery",
+    "sub_specialty": "Heart Transplantation",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Medanta - The Medicity",
+    "years_of_experience": 51,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Trehan has successfully performed over 48,000 open-heart surgeries and is founder of Medanta Hospital. Pioneer in total arterial revascularization and off-pump bypass surgery in India. Recipient of Padma Bhushan and Padma Shri awards for contributions to cardiac surgery. Known for performing complex cardiac procedures with 99% success rate.",
+    "special_interests_and_expertise": "Expert in total arterial revascularization and beating heart surgery. Pioneer in transmyocardial laser revascularization."
+  },
+  {
+    "doctor_id": "DOC-IND-005",
+    "name": "Dr. Ramakanta Panda",
+    "primary_specialty": "Cardiovascular Surgery",
+    "sub_specialty": "High-Risk Cardiac Surgery",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Asian Heart Institute",
+    "years_of_experience": 40,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Odia"
+    ],
+    "critical_surgeries_summary": "Dr. Panda has performed about 30,000 successful cardiac surgeries including over 2,000 redo surgeries and 6,000+ high-risk surgeries with 99.8% success rate. Led team that operated on former PM Manmohan Singh in 2009. Performed record 12 grafts to bypass 17 blockages in a single patient. Pioneer in total arterial revascularization and off-pump bypass surgery.",
+    "special_interests_and_expertise": "World's safest cardiac surgeon with 99.8% success rate in bypass surgery. Expert in high-risk and redo cardiac surgeries."
+  },
+  {
+    "doctor_id": "DOC-IND-006",
+    "name": "Dr. Ashok Rajgopal",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Joint Replacement",
+    "location": "Delhi NCR",
+    "hospital_affiliation": "Fortis Bone and Joint Institute",
+    "years_of_experience": 35,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Rajgopal has performed over 40,000 knee replacement surgeries with 28 Total Knee Replacements in less than 12 hours. First surgeon in India to introduce NAV 3 computer navigation for knee replacement. Has revolutionized orthopedics and knee replacement procedures in India with over 3 decades of experience.",
+    "special_interests_and_expertise": "Pioneer in computer navigation technique for joint replacement. Expert in revision joint replacement surgeries."
+  },
+  {
+    "doctor_id": "DOC-IND-007",
+    "name": "Dr. Hitesh Garg",
+    "primary_specialty": "Spine Surgery",
+    "sub_specialty": "Scoliosis Surgery",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Artemis Hospital",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Punjabi"
+    ],
+    "critical_surgeries_summary": "Dr. Garg has performed over 7,000 successful spine surgeries including 1,400+ spinal fusions, 240 scoliosis corrections, and 160 lumbar and cervical artificial disc replacements. Graduated from AIIMS and trained at Yale University, USA. Uses cutting-edge technology including O-arm, navigation, and neuromonitoring for complex spine procedures.",
+    "special_interests_and_expertise": "Leading expert in scoliosis and spinal deformity correction. Pioneer in minimally invasive spine surgery techniques."
+  },
+  {
+    "doctor_id": "DOC-IND-008",
+    "name": "Dr. Suresh H. Advani",
+    "primary_specialty": "Medical Oncology",
+    "sub_specialty": "Hematologic Cancers, Bone Marrow Transplant",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 50,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Gujarati"
+    ],
+    "critical_surgeries_summary": "Dr. Advani performed India's first successful bone marrow transplant and established first BMT setup in India. Led clinical trials for lymphoblastic leukemia on 1,200 patients, increasing success rates from 20% to 70%. Trained at Fred Hutchinson Cancer Research Center with Nobel laureate Dr. E Donnall Thomas. Recipient of Padma Bhushan and Padma Shri awards.",
+    "special_interests_and_expertise": "Father of Oncology in India and pioneer of bone marrow transplantation. Expert in leukemia and lymphoma treatment with CAR-T therapy."
+  },
+  {
+    "doctor_id": "DOC-IND-009",
+    "name": "Dr. Vedant Kabra",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "Robotic Cancer Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital Vasant Kunj",
+    "years_of_experience": 23,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Kabra has experience of over 12,000 cancer surgeries including complex robotic procedures. Trained at Tata Memorial Hospital Mumbai and National Cancer Centre Singapore. Specializes in breast conservation, oncoplastic surgery, and gastrointestinal cancers. Faculty at various international conferences with numerous publications.",
+    "special_interests_and_expertise": "Pioneer in robotic surgery for cancer treatment. Expert in breast conservation and oncoplastic techniques."
+  },
+  {
+    "doctor_id": "DOC-IND-010",
+    "name": "Dr. B.K. Misra",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Gamma Knife Radiosurgery",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Hinduja Hospital",
+    "years_of_experience": 40,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "critical_surgeries_summary": "Dr. Misra is Vice-President of World Federation of Neurosurgical Societies. First neurosurgeon globally to perform image-guided surgery for aneurysms. First in South Asia to perform gamma knife radiosurgery. First in India to perform EC-IC bypass for Moyamoya disease, endoscopic spinal surgery, and awake craniotomy. Notable patients include Hrithik Roshan and Salman Khan.",
+    "special_interests_and_expertise": "Pioneer in image-guided neurosurgery and gamma knife radiosurgery. Expert in cerebrovascular surgery and Moyamoya disease."
+  },
+  {
+    "doctor_id": "DOC-IND-011",
+    "name": "Dr. Y.K. Mishra",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Robotic Cardiac Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 34,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Mishra has successfully completed over 14,800 open heart surgeries and over 510 robotic surgeries. Fourth Asian and second Indian to receive special honors in cardiac surgery. Recipient of Lifetime Achievement Award from Dr. A.P.J. Abdul Kalam. Conducted live surgery workshops in Thailand, Bangladesh, and Nepal. Expert in total arterial bypass coronary surgery.",
+    "special_interests_and_expertise": "Pioneer in robotic cardiac surgery in India. Expert in total arterial revascularization."
+  },
+  {
+    "doctor_id": "DOC-IND-012",
+    "name": "Dr. K.R. Balakrishnan",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Heart and Lung Transplantation",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "MGM Healthcare",
+    "years_of_experience": 45,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Balakrishnan has conducted 300+ successful heart transplants and is pioneer in pediatric heart transplants in India. Expert in LVAD and HVAD pump implants for heart failure management. Director of Heart & Lung Transplant program with extensive experience in complex heart failure cases. Leading transplant surgeon with expertise in mechanical circulatory support.",
+    "special_interests_and_expertise": "Leading heart transplant surgeon specializing in complex heart failure. Pioneer in pediatric heart transplants."
+  },
+  {
+    "doctor_id": "DOC-IND-013",
+    "name": "Dr. Yash Gulati",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Spine Surgery, Joint Replacement",
+    "location": "New Delhi",
+    "hospital_affiliation": "Indraprastha Apollo Hospital",
+    "years_of_experience": 29,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Gulati was first to perform Endoscopic Disc Surgery in India and introduce gyroscope-based computer navigation for knee replacement. Performed largest series of Total Knee Replacements using I-Assist Navigation Technique. Appointed Honorary Surgeon to Former President of India. Successfully operated on Presidents of India and Mozambique. Recipient of Padma Shri Award 2009.",
+    "special_interests_and_expertise": "Pioneer in endoscopic disc surgery and computer navigation for joint replacement."
+  },
+  {
+    "doctor_id": "DOC-IND-014",
+    "name": "Dr. Arun Saroha",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Brain Tumor Surgery, Spine Surgery",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Max Hospital",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Saroha has successfully conducted over 8,000 brain and spine surgeries at premier medical institutions. Honored by Union Cabinet Minister for bringing international patients to India. Specializes in degenerative spine disorders, brain tumors, disc replacements, and pediatric neurosurgery. Published numerous papers on brain tumor research and speaker at international conferences.",
+    "special_interests_and_expertise": "Expert in neuro-oncology and complex spine fixations. Pioneer in minimally invasive neurosurgical techniques."
+  },
+  {
+    "doctor_id": "DOC-IND-015",
+    "name": "Dr. Bipin Walia",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Spine Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Max Super Specialty Hospital",
+    "years_of_experience": 35,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Walia has performed more than 7,000 spine surgery procedures and is an accomplished practitioner in motion replacement treatment in neurosurgery. Principal Head and Director of Neurosurgery at Max Saket Hospital. Alumni from AFMC and AIIMS with expertise in complex spine disorders and minimally invasive techniques.",
+    "special_interests_and_expertise": "Frontrunner in motion replacement treatment in neurosurgery. Expert in complex spine surgery procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-016",
+    "name": "Dr. Deepu Banerji",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Minimally Invasive Neurosurgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital",
+    "years_of_experience": 34,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Bengali"
+    ],
+    "critical_surgeries_summary": "Dr. Banerji's prolific 34-year career includes expertise in microsurgery and minimally invasive neurosurgery. One of the most qualified experts in the country on minimally invasive techniques. Has performed thousands of complex brain and spine procedures with focus on reducing patient trauma and recovery time.",
+    "special_interests_and_expertise": "Leading expert in microsurgery and minimally invasive neurosurgery. Specializes in complex brain tumor removal."
+  },
+  {
+    "doctor_id": "DOC-IND-017",
+    "name": "Dr. Ashok Seth",
+    "primary_specialty": "Interventional Cardiology",
+    "sub_specialty": "Complex Angioplasty",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Escorts Heart Institute",
+    "years_of_experience": 40,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Seth has performed over 50,000 angiograms and 20,000 angioplasties, introducing cutting-edge cardiac procedures to India. First in Asia to perform robotic angioplasty. Introduced bioresorbable stents in India. Chairman of Fortis Escorts Heart Institute with expertise in complex coronary interventions.",
+    "special_interests_and_expertise": "Pioneer in robotic angioplasty in Asia. Expert in complex coronary interventions and bioresorbable stents."
+  },
+  {
+    "doctor_id": "DOC-IND-018",
+    "name": "Dr. T.S. Kler",
+    "primary_specialty": "Cardiology",
+    "sub_specialty": "Electrophysiology",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital",
+    "years_of_experience": 48,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Kler has performed more than 35,000 coronary, renal, carotid, and peripheral angioplasties over 48 years. Pioneer in electrophysiology, revolutionizing cardiac rhythm management in India. Expert in diagnosing and treating heart rhythm disorders with cutting-edge treatment options.",
+    "special_interests_and_expertise": "Pioneer in electrophysiology and cardiac rhythm management. Expert in complex angioplasty procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-019",
+    "name": "Dr. Vivek Vij",
+    "primary_specialty": "Liver Transplant Surgery",
+    "sub_specialty": "Hepatobiliary Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital",
+    "years_of_experience": 24,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Vij leads the renowned Liver Transplant Program at Fortis Hospital with over 24 years of experience. Has performed numerous complex liver transplants and hepatobiliary procedures. Expert in treating various liver conditions including hepatitis, cirrhosis, and liver cancer. Known for exceptional patient care and innovation in the field.",
+    "special_interests_and_expertise": "Leading liver transplant surgeon with expertise in complex hepatobiliary procedures. Pioneer in living donor liver transplantation."
+  },
+  {
+    "doctor_id": "DOC-IND-020",
+    "name": "Dr. S.K.S. Marya",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Joint Replacement",
+    "location": "New Delhi",
+    "hospital_affiliation": "Max Hospital",
+    "years_of_experience": 42,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Marya has conducted more than 18,000 joint replacement surgeries over 42 years. Former president of Arthroplasty Society in Asia. Pioneer in hip and knee replacement procedures with expertise in revision surgeries. Has trained numerous orthopedic surgeons across Asia in advanced joint replacement techniques.",
+    "special_interests_and_expertise": "Leading expert in joint replacement and revision surgeries. Former president of Arthroplasty Society in Asia."
+  },
+
+  {
+    "doctor_id": "DOC-IND-021",
+    "name": "Dr. Sudhir Dubey",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Neurosurgical Oncology",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Medanta Hospital",
+    "years_of_experience": 38,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Dubey has performed over 10,000 neurosurgical operations as Chairman of Neurosurgery at Medanta. Graduated with top honors from King George's Medical College, awarded Sir Rupkishan Das Gold Medal. Expertise in brain tumor surgery, stereotactic procedures, and complex spine surgeries. Pioneer in advanced neurosurgical techniques in India.",
+    "special_interests_and_expertise": "Expert in neurosurgical oncology and stereotactic procedures. Pioneer in minimally invasive brain surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-022",
+    "name": "Dr. Siddhartha Ghosh",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Neuro-oncology, Skull Base Surgery",
+    "location": "Kolkata, West Bengal",
+    "hospital_affiliation": "Apollo Hospitals",
+    "years_of_experience": 40,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Bengali"
+    ],
+    "critical_surgeries_summary": "Dr. Ghosh has performed over 20,000 successful neurosurgeries on brain, spine, and peripheral nerves. Especially celebrated for expertise in complex brain and spine tumor removal. Specializes in neuro-oncology, skull base surgery, pediatric neurosurgery, and stereotactic surgery with four decades of unparalleled experience.",
+    "special_interests_and_expertise": "Expert in complex brain and spine tumor removal. Specializes in skull base surgery and pediatric neurosurgery."
+  },
+  {
+    "doctor_id": "DOC-IND-023",
+    "name": "Dr. V.P. Singh",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Epilepsy Surgery, Gamma Knife",
+    "location": "New Delhi",
+    "hospital_affiliation": "AIIMS",
+    "years_of_experience": 30,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Singh has operated over 400 intracranial aneurysms and started Gamma Knife Unit and epilepsy surgery program at AIIMS. Published more than 70 scientific papers. Special interest in brain tumor surgery, cerebrovascular surgery, epilepsy surgery and radiosurgery. Actively involved in treatment of arteriovenous malformations by radiosurgery techniques.",
+    "special_interests_and_expertise": "Pioneer in epilepsy surgery and Gamma Knife radiosurgery at AIIMS. Expert in cerebrovascular surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-024",
+    "name": "Dr. I.P.S. Oberoi",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Arthroscopy, Joint Replacement",
+    "location": "New Delhi",
+    "hospital_affiliation": "Artemis Hospital",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Punjabi"
+    ],
+    "critical_surgeries_summary": "Dr. Oberoi has 97% success rate in performing more than 7,000 joint replacements. First and one of the only few surgeons to perform Key Hole Surgery (Arthroscopy) for Shoulder, Knee, Elbow, Hip, and Ankle Injuries. Youngest arthroscopy surgeon elected as President of Indian Arthroscopy Society twice. First Indian to serve as secretary of Asian Arthroscopy Congress.",
+    "special_interests_and_expertise": "Pioneer in arthroscopic surgery for multiple joints. Expert in complex joint replacement procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-025",
+    "name": "Dr. Pradeep Sharma",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Scoliosis Surgery, Pediatric Orthopedics",
+    "location": "New Delhi",
+    "hospital_affiliation": "BLK Super Specialty Hospital",
+    "years_of_experience": 42,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Sharma has vast experience of 42+ years in joint replacement and joint reconstruction surgeries. Fellowship from UK with expertise in scoliosis surgery, CDH surgery, Perthes' disease, cerebral palsy, limb lengthening procedures, discectomies and lumbosacral fusions. Active participant in major orthopedic meetings nationally.",
+    "special_interests_and_expertise": "Expert in scoliosis surgery and pediatric orthopedics. Specializes in limb lengthening procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-026",
+    "name": "Dr. H.S. Chhabra",
+    "primary_specialty": "Spine Surgery",
+    "sub_specialty": "Spinal Cord Injury Rehabilitation",
+    "location": "New Delhi",
+    "hospital_affiliation": "Indian Spinal Injuries Centre",
+    "years_of_experience": 35,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Chhabra is Medical Director of Indian Spinal Injuries Centre and one of the most skilled spine surgeons in the country. Fellowship in Spine Surgery from Germany, Netherlands, and South Korea. Expert in spinal cord injury rehabilitation and complex spine reconstruction procedures. Pioneer in establishing comprehensive spinal injury care in India.",
+    "special_interests_and_expertise": "Leading expert in spinal cord injury rehabilitation. Pioneer in comprehensive spinal injury care."
+  },
+  {
+    "doctor_id": "DOC-IND-027",
+    "name": "Dr. Srinivasan Rajappa",
+    "primary_specialty": "Spine Surgery",
+    "sub_specialty": "Minimally Invasive Spine Surgery",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "Apollo Hospital",
+    "years_of_experience": 30,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Rajappa heads Spine Unit at Apollo Chennai performing surgeries using latest technological advancements including minimally invasive SI joint fusion and Cervical Artificial Disc. Pioneer in introducing Cotrel-Dubousset, Moss Miami, Ray cages, BAK cages, and Harms Mesh Systems. Performed Asia's first deformity correction of infantile scoliosis using Shape-memory Alloy staples.",
+    "special_interests_and_expertise": "Pioneer in arthro-plastic reconstruction for lumbar and cervical discs. Expert in infantile scoliosis correction."
+  },
+  {
+    "doctor_id": "DOC-IND-028",
+    "name": "Dr. Harshavardhan Hegde",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Spine Surgery, Arthroplasty",
+    "location": "New Delhi",
+    "hospital_affiliation": "Max Smart Super Speciality Hospital",
+    "years_of_experience": 29,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Hegde has performed over 3,000 knee and hip replacement surgeries both primary and revision. Trained in Germany and UK for complex spinal surgeries and advanced arthroplasty. Performed numerous complex spinal surgeries including scoliotic corrections, disc replacements, instrumentation for spondylolisthesis, and tuberculosis spine surgeries.",
+    "special_interests_and_expertise": "Expert in complex spine surgeries and joint replacement. Specializes in revision arthroplasty procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-029",
+    "name": "Dr. Kamran Khan",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "Thoracic Oncology",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Tata Memorial Hospital",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Urdu"
+    ],
+    "critical_surgeries_summary": "Dr. Khan has performed more than 6,000 cancer surgeries as part of eminent onco-surgeons team at Tata Memorial Hospital. The hospital performs over 6,000 complex surgeries yearly on patients from India, South East Asia, and Middle East. Fellow of Senior Research in Thoracic Oncology with expertise in lung and esophageal cancers.",
+    "special_interests_and_expertise": "Expert in thoracic oncology and complex cancer surgeries. Specializes in minimally invasive oncosurgery."
+  },
+  {
+    "doctor_id": "DOC-IND-030",
+    "name": "Dr. Surendra Kumar Dabas",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "Robotic Head and Neck Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "BLK Super Speciality Hospital",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Dabas is Director of Surgical Oncology and Chief of Robotic Surgery at BLK Hospital. Has performed the highest number of robotic head and neck surgeries in Asia. Previously worked at Fortis Hospital, Rajiv Gandhi Cancer Institute, and Fortis Memorial Research Institute. Expert in complex robotic cancer procedures.",
+    "special_interests_and_expertise": "Pioneer in robotic head and neck surgery in Asia. Expert in minimally invasive cancer surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-031",
+    "name": "Dr. Vinod Raina",
+    "primary_specialty": "Medical Oncology",
+    "sub_specialty": "Hematologic Oncology",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Memorial Research Institute",
+    "years_of_experience": 45,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Raina has accomplished nearly 600 cancer transplants in India, including around 250 in recent years. Specialized in Pediatric Chemotherapy, Lung, Prostate, and Breast Cancer, as well as Bio-Radiotherapy for Head and Neck Cancers. Over 45 years of experience in medical oncology with expertise in complex cancer treatments.",
+    "special_interests_and_expertise": "Expert in cancer transplants and pediatric chemotherapy. Specializes in bio-radiotherapy for head and neck cancers."
+  },
+  {
+    "doctor_id": "DOC-IND-032",
+    "name": "Dr. Rajiv Mahendru",
+    "primary_specialty": "Urology",
+    "sub_specialty": "Robotic Urology, Uro-oncology",
+    "location": "New Delhi",
+    "hospital_affiliation": "Max Hospital",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Mahendru specializes in robotic urology and complex uro-oncological procedures. Has performed numerous robotic prostatectomies, partial nephrectomies, and bladder cancer surgeries. Expert in minimally invasive urological procedures with extensive training in robotic surgery from international centers.",
+    "special_interests_and_expertise": "Pioneer in robotic urology procedures. Expert in complex uro-oncological surgeries."
+  },
+  {
+    "doctor_id": "DOC-IND-033",
+    "name": "Dr. Randhir Sud",
+    "primary_specialty": "Gastroenterology",
+    "sub_specialty": "Liver Transplant, Hepatology",
+    "location": "New Delhi",
+    "hospital_affiliation": "Medanta Hospital",
+    "years_of_experience": 42,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Sud is highly respected Gastroenterologist with 42+ years of experience specializing in gastroenterology and liver transplant surgery. Highly skilled in treating various liver and stomach conditions such as hepatitis, cirrhosis, and liver cancer. Expert in endoscopic procedures and complex hepatobiliary interventions.",
+    "special_interests_and_expertise": "Expert in liver transplantation and hepatobiliary diseases. Specializes in therapeutic endoscopy."
+  },
+  {
+    "doctor_id": "DOC-IND-034",
+    "name": "Dr. Sanjeev Gera",
+    "primary_specialty": "Interventional Cardiology",
+    "sub_specialty": "Complex Coronary Interventions",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Gera has over 20 years of extensive experience and is considered one of the most renowned cardiologists in India. Trained at prestigious institutes in Delhi, celebrated for evidence-based, patient-centric, and cost-effective approach to treating cardiac conditions. Expert in complex coronary interventions and structural heart procedures.",
+    "special_interests_and_expertise": "Expert in complex coronary interventions. Specializes in structural heart disease interventions."
+  },
+  {
+    "doctor_id": "DOC-IND-035",
+    "name": "Dr. Muthu Jothi",
+    "primary_specialty": "Pediatric Cardiac Surgery",
+    "sub_specialty": "Complex Congenital Heart Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Apollo Hospital",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Jothi leads Pediatric Cardiac Surgery Team at Apollo Hospitals, trained in UK for heart surgeries for children. Expert in Cardiac Switches for children needing complete cardiac repairs and TOF surgeries (Tetralogy of Fallot). Specializes in complex congenital heart abnormalities requiring cardiac switch surgery.",
+    "special_interests_and_expertise": "Expert in pediatric cardiac switch surgery. Specializes in Tetralogy of Fallot repairs."
+  },
+  {
+    "doctor_id": "DOC-IND-036",
+    "name": "Dr. Nidhi Rawal",
+    "primary_specialty": "Pediatric Cardiac Surgery",
+    "sub_specialty": "Heart Defect Closure",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Artemis Hospital",
+    "years_of_experience": 18,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Rawal trained at prestigious Madras Medical Mission for pediatric cardiac surgeries. Has performed great number of ASD closures and VSD closures both open heart and device closures. Expert in Heart Hole Closure Surgeries for children with extensive experience in minimally invasive techniques.",
+    "special_interests_and_expertise": "Expert in ASD and VSD closure surgeries. Specializes in minimally invasive pediatric cardiac procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-037",
+    "name": "Dr. Z.S. Meharwal",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Minimally Invasive Cardiac Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Escorts Heart Institute",
+    "years_of_experience": 42,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Meharwal has performed over 20,000 cardiac surgeries including complex procedures. Over 40 publications in peer-reviewed journals. Programme director of DNB cardiothoracic surgery at Fortis Escorts. Has trained many surgeons for cardiac surgeries in India and abroad who are now independent cardiac surgeons at different centers worldwide.",
+    "special_interests_and_expertise": "Pioneer in minimally invasive cardiac surgery. Expert in training cardiac surgeons internationally."
+  },
+  {
+    "doctor_id": "DOC-IND-038",
+    "name": "Dr. Sandeep Attawar",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Heart and Lung Transplantation",
+    "location": "Hyderabad, Telangana",
+    "hospital_affiliation": "KIMS Hospital",
+    "years_of_experience": 30,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Telugu"
+    ],
+    "critical_surgeries_summary": "Dr. Attawar is founder director of advanced heart failure and thoracic organ transplant program at KIMS Hyderabad. Has accomplished more than 10,000 cardiac surgical procedures in adult and pediatric patients. One of the only surgeons in India to handle cases of patients of all ages from neonates to elderly.",
+    "special_interests_and_expertise": "Expert in heart and lung transplantation. Specializes in pediatric and adult cardiac surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-039",
+    "name": "Dr. Ajay Kaul",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Total Arterial Bypass Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "BLK Super Speciality Hospital",
+    "years_of_experience": 36,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Kaul has performed over 10,000 cardiac surgeries and 4,000 total arterial bypass coronary surgeries. Membership at international level of Cardiac Surgery in Brisbane Australia. One of the top cardiac surgeons in India with extensive experience in complex cardiac procedures.",
+    "special_interests_and_expertise": "Expert in total arterial bypass coronary surgery. Specializes in complex cardiac reconstructions."
+  },
+  {
+    "doctor_id": "DOC-IND-040",
+    "name": "Dr. Puneet Girdhar",
+    "primary_specialty": "Spine Surgery",
+    "sub_specialty": "Minimally Invasive Spine Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "BLK Max Hospital",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Girdhar is Director of Spine Surgery at Institute for Bone, Joint Replacement, Orthopedics Spine & Sports Treatment at BLK Max Hospital. Expertise in minimally invasive spine procedures, complex spinal reconstructions, and sports-related spine injuries. Trained internationally with focus on advanced spine surgery techniques.",
+    "special_interests_and_expertise": "Expert in minimally invasive spine surgery. Specializes in sports-related spine injuries."
+  },
+
+  {
+    "doctor_id": "DOC-IND-041",
+    "name": "Dr. G. Balamurali",
+    "primary_specialty": "Spine Surgery",
+    "sub_specialty": "Keyhole Spine Surgery",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "Kauvery Hospital",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Balamurali trained at Royal College of Edinburgh and Schulthess Klinik Switzerland. Pioneer in keyhole spine surgery and minimally invasive spine surgery in India. Has performed over 3,000 outpatient spinal disorder cases. Medical fellowships from reputed institutions worldwide with expertise in complex spine procedures.",
+    "special_interests_and_expertise": "Pioneer in keyhole spine surgery techniques. Expert in minimally invasive spine procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-042",
+    "name": "Dr. K.M. Cherian",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Pediatric Cardiac Surgery",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "Frontier Lifeline Hospital",
+    "years_of_experience": 50,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil",
+      "Malayalam"
+    ],
+    "critical_surgeries_summary": "Dr. Cherian performed first neonatal arterial switch operation in India in October 1990. First two-stage arterial switch for transposition with regressed left ventricle in 1992. First double switch operation for congenitally corrected transposition in 1993. Pioneer who did most complex congenital heart surgeries first time in India at Perambur Railway Hospital in late 1970s.",
+    "special_interests_and_expertise": "Pioneer in pediatric cardiac surgery in India. Expert in complex congenital heart procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-043",
+    "name": "Dr. Krishna Iyer",
+    "primary_specialty": "Pediatric Cardiac Surgery",
+    "sub_specialty": "Neonatal Cardiac Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Escorts Heart Institute",
+    "years_of_experience": 35,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Iyer performed first aortic root transfer (Nikaidoh-Bex) for transposition with VSD and pulmonary stenosis in India. Pioneer in neonatal cardiac surgery with extensive experience in complex congenital heart procedures. Trained many junior surgeons who successfully lead pediatric cardiac surgery programs across India.",
+    "special_interests_and_expertise": "Expert in neonatal cardiac surgery. Pioneer in complex arterial switch operations."
+  },
+  {
+    "doctor_id": "DOC-IND-044",
+    "name": "Dr. Abhaya Kumar",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Minimally Invasive Spine Surgery",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Kokilaben Dhirubhai Ambani Hospital",
+    "years_of_experience": 30,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "critical_surgeries_summary": "Dr. Kumar is Head of Neurosurgery and Minimally Invasive Spine Surgery at Kokilaben Hospital. Expert in brain surgery and stereotactic radiosurgery. Has treated over 300 cases of Craniovertebral Junction anomalies, performed surgeries for 3,000 brain tumors and over 500 spinal cord tumors. Utilizes advanced technologies like Intraoperative MRI, neuro-navigation, and neuroendoscopy.",
+    "special_interests_and_expertise": "Expert in minimally invasive spine surgery and stereotactic radiosurgery. Specializes in craniovertebral junction anomalies."
+  },
+  {
+    "doctor_id": "DOC-IND-045",
+    "name": "Dr. Sudheer Kumar Tyagi",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Complex Neurovascular Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Apollo Hospitals Indraprastha",
+    "years_of_experience": 33,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Tyagi has over 33 years of exemplary experience in neurosurgery at Apollo Hospitals. Career marked by dedication to advancing neurosurgical techniques and improving patient outcomes through precise and innovative surgical practices. Expert in complex neurovascular procedures and brain tumor surgeries.",
+    "special_interests_and_expertise": "Expert in complex neurovascular surgery. Specializes in advanced brain tumor removal techniques."
+  },
+  {
+    "doctor_id": "DOC-IND-046",
+    "name": "Dr. Srinivasan Paramasivam",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Functional Neurosurgery",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "Apollo Hospital",
+    "years_of_experience": 10,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Paramasivam is senior consultant neurosurgeon at Apollo Chennai following assignments abroad. Overall experience of 10 years with specialization in functional neurosurgery, deep brain stimulation, and movement disorder surgery. Trained internationally in advanced neurosurgical techniques.",
+    "special_interests_and_expertise": "Expert in functional neurosurgery and deep brain stimulation. Specializes in movement disorder surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-047",
+    "name": "Dr. Paresh K. Doshi",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Deep Brain Stimulation",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Jaslok Hospital",
+    "years_of_experience": 28,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Gujarati"
+    ],
+    "critical_surgeries_summary": "Dr. Doshi is first Indian Neurosurgeon to perform Deep Brain Stimulation surgery and sole Asian member of International Task Force for Movement Disorders Surgery. Leading figure in Functional Neurosurgery with specialized focus. Pioneer in DBS procedures for Parkinson's disease and other movement disorders in India.",
+    "special_interests_and_expertise": "Pioneer in Deep Brain Stimulation surgery in India. Expert in movement disorders surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-048",
+    "name": "Dr. Himanshu Champaneri",
+    "primary_specialty": "Neurosurgery",
+    "sub_specialty": "Functional Neurosurgery",
+    "location": "Gujarat",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 15,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Gujarati"
+    ],
+    "critical_surgeries_summary": "Dr. Champaneri has performed 1,500+ neurosurgeries with expertise in Parkinson's Disease, Dystonia, Essential Tremors, Failed Back Syndrome, and Spastic Cerebral Palsy. First to successfully perform DBS Surgery on schizophrenia patient from Africa in Haryana. Member of Neurology Society of India and AO Spine.",
+    "special_interests_and_expertise": "Expert in functional neurosurgery for movement disorders. Specializes in DBS for psychiatric conditions."
+  },
+  {
+    "doctor_id": "DOC-IND-049",
+    "name": "Dr. Amit Agarwal",
+    "primary_specialty": "Medical Oncology",
+    "sub_specialty": "Hematologic Oncology",
+    "location": "New Delhi",
+    "hospital_affiliation": "BLK Super Specialty Hospital",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Agarwal has over 25 years of professional experience in medical oncology, serving as Director of Medical Oncology at BLK Hospital. Completed MBBS and MD from Delhi University with extensive expertise in treating blood cancers, solid tumors, and conducting bone marrow transplants.",
+    "special_interests_and_expertise": "Expert in hematologic oncology and bone marrow transplantation. Specializes in personalized cancer treatment."
+  },
+  {
+    "doctor_id": "DOC-IND-050",
+    "name": "Dr. Biswajyoti Hazarika",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "Head and Neck Surgery",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Artemis Hospital",
+    "years_of_experience": 16,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Assamese"
+    ],
+    "critical_surgeries_summary": "Dr. Hazarika has been in specialized field of Head & Neck surgery for 16 years. Expert in complex head and neck cancer surgeries including reconstructive procedures. Has performed numerous surgeries for thyroid, oral, and laryngeal cancers with focus on organ preservation techniques.",
+    "special_interests_and_expertise": "Expert in head and neck cancer surgery. Specializes in reconstructive oncological procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-051",
+    "name": "Dr. Madan Mohan Reddy",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Complex Joint Reconstruction",
+    "location": "Hyderabad, Telangana",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 35,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Telugu"
+    ],
+    "critical_surgeries_summary": "Dr. Reddy has over 35 years of experience with expertise in complex orthopedic surgeries. Throughout his career, consistently demonstrated commitment to advancing orthopedic treatments. Specializes in complex joint reconstructions and revision surgeries with significant contributions to the field.",
+    "special_interests_and_expertise": "Expert in complex joint reconstruction. Specializes in revision orthopedic surgeries."
+  },
+  {
+    "doctor_id": "DOC-IND-052",
+    "name": "Dr. Prakash Selvam",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Sports Medicine, Arthroscopy",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "CTS Speciality Hospital",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Selvam is Chairman and Managing Director at CTS Hospital with remarkable surgical achievements in trauma, spine, joint replacement, arthroscopy, and sports medicine. Over two decades of experience performing hip and knee replacements. Expertise in Ilizarov technique with success in multiple limb lengthening procedures.",
+    "special_interests_and_expertise": "Expert in sports medicine and arthroscopy. Specializes in limb lengthening procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-053",
+    "name": "Dr. Vineesh Mathur",
+    "primary_specialty": "Spine Surgery",
+    "sub_specialty": "Complex Spine Reconstruction",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Medanta Bone and Joint Institute",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Mathur is Director of Spine Unit at Medanta since 2009. Has successfully completed over 5,000 independent surgeries with expertise in complex spine reconstructions. Two decades of experience in orthopedics and spine with dedication to advancing medical knowledge and patient care.",
+    "special_interests_and_expertise": "Expert in complex spine reconstruction. Specializes in minimally invasive spine techniques."
+  },
+  {
+    "doctor_id": "DOC-IND-054",
+    "name": "Dr. Vidyadhara S.",
+    "primary_specialty": "Spine Surgery",
+    "sub_specialty": "Scoliosis Surgery",
+    "location": "Bangalore, Karnataka",
+    "hospital_affiliation": "Manipal Hospital",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Kannada"
+    ],
+    "critical_surgeries_summary": "Dr. Vidyadhara has over 20 years successful career in spine surgery, worked with most reputed centers globally. Awarded ISCA Young Scientist Award from Dr. APJ Abdul Kalam in 2006, ISSLS Best Research Award in 2010, and Lester Lowe SICOT Award in 2007. Fifth Indian and first from Karnataka awarded active fellowship of Scoliosis Research Society of USA.",
+    "special_interests_and_expertise": "Expert in scoliosis surgery. Member of Scoliosis Research Society of USA."
+  },
+  {
+    "doctor_id": "DOC-IND-055",
+    "name": "Dr. Mudit Khanna",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Joint Replacement, Arthroscopy",
+    "location": "New Delhi",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Khanna earned degrees from King George Medical College with advanced surgical training in joint replacement and arthroscopic procedures at leading institutions across UK, Europe, USA, and Australia. Five years of specialized training in UK gaining experience in diverse clinical environments. Expert in primary and revision joint replacements.",
+    "special_interests_and_expertise": "Expert in joint replacement and arthroscopic surgery. Trained internationally in advanced techniques."
+  },
+  {
+    "doctor_id": "DOC-IND-056",
+    "name": "Dr. Yatinder Kharbanda",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Complex Trauma Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Indraprastha Apollo Hospital",
+    "years_of_experience": 34,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Kharbanda has 34 years of experience working in UK and India with expertise in Joint Replacement and revision surgery. Expanded skills through orthopedic training programs at Birmingham, Linz Austria, Liverpool. Interested in polytrauma and complex trauma. Performs arthroscopy, sports surgeries, hip and knee replacements.",
+    "special_interests_and_expertise": "Expert in complex trauma and polytrauma management. Specializes in revision joint surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-057",
+    "name": "Dr. Prathap C. Reddy",
+    "primary_specialty": "Healthcare Administration",
+    "sub_specialty": "Cardiology",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "Apollo Hospitals",
+    "years_of_experience": 50,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Telugu",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Reddy is founder and Chairman of Apollo Hospitals, establishing India's first corporate hospital in 1983. Trained as cardiologist in USA and UK. Pioneer in bringing world-class healthcare to India, creating network of specialized medical facilities. Made quality healthcare accessible to Indian population through innovative healthcare delivery models.",
+    "special_interests_and_expertise": "Pioneer in corporate healthcare in India. Visionary in accessible healthcare delivery."
+  },
+  {
+    "doctor_id": "DOC-IND-058",
+    "name": "Dr. Mohamed Rela",
+    "primary_specialty": "Liver Transplant Surgery",
+    "sub_specialty": "Pediatric Liver Transplantation",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "Dr. Rela Institute & Medical Centre",
+    "years_of_experience": 30,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Rela has performed over 4,000 liver transplants with world record for performing liver transplant on 5-day old baby. Pioneer in pediatric liver transplantation globally. Founded Dr. Rela Institute focusing on liver diseases and transplantation. Trained at King's College Hospital London.",
+    "special_interests_and_expertise": "World leader in pediatric liver transplantation. Pioneer in living donor liver transplants."
+  },
+  {
+    "doctor_id": "DOC-IND-059",
+    "name": "Dr. Ashok Vaid",
+    "primary_specialty": "Medical Oncology",
+    "sub_specialty": "Bone Marrow Transplantation",
+    "location": "New Delhi",
+    "hospital_affiliation": "Medanta Hospital",
+    "years_of_experience": 35,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Vaid performed first 25 bone marrow transplants in any private sector hospital in North India. Awarded Padma Shri by President of India in 2009. Founder member of Indian Cooperative Oncology Network (ICON). Life member of European Haematology Association and European Society of Medical Oncology.",
+    "special_interests_and_expertise": "Pioneer in bone marrow transplantation in private sector. Expert in hematologic malignancies."
+  },
+  {
+    "doctor_id": "DOC-IND-060",
+    "name": "Dr. Ankur Garg",
+    "primary_specialty": "Liver Transplant Surgery",
+    "sub_specialty": "Living Donor Liver Transplant",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Medanta Hospital",
+    "years_of_experience": 15,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Garg specializes in liver transplantation and hepatobiliary surgery at Medanta Hospital. Has performed numerous complex living donor liver transplants with excellent outcomes. Trained at premier institutions with expertise in minimally invasive liver surgery and complex hepatobiliary procedures.",
+    "special_interests_and_expertise": "Expert in living donor liver transplantation. Specializes in minimally invasive hepatobiliary surgery."
+  },
+  
+  {
+    "doctor_id": "DOC-IND-061",
+    "name": "Dr. Subhash Chandra",
+    "primary_specialty": "Cardiology",
+    "sub_specialty": "Interventional Cardiology",
+    "location": "New Delhi",
+    "hospital_affiliation": "BLK Super Speciality Hospital",
+    "years_of_experience": 30,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Chandra has successfully performed over 25,000 complex cardiology procedures. Honored with numerous national and international awards for contributions to interventional cardiology. Expert in complex coronary interventions, primary angioplasty, and device closures. Trained in USA and Belgium with extensive experience in cutting-edge cardiac procedures.",
+    "special_interests_and_expertise": "Expert in complex coronary interventions. Pioneer in primary angioplasty techniques."
+  },
+  {
+    "doctor_id": "DOC-IND-062",
+    "name": "Dr. K.K. Saxena",
+    "primary_specialty": "Cardiology",
+    "sub_specialty": "Interventional Cardiology",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital",
+    "years_of_experience": 35,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Saxena has over 35 years establishing him as seasoned expert in heart care. Research Fellowship in Interventional Cardiology from Royal Adelaide Hospital, Australia. Skilled in performing angioplasty, echocardiography, stress tests, pacemaker implantation, and cardiac catheterization. Extensive experience in complex cardiac interventions.",
+    "special_interests_and_expertise": "Expert in cardiac catheterization and pacemaker implantation. Specializes in complex angioplasty procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-063",
+    "name": "Dr. Mahesh Ghogare",
+    "primary_specialty": "Cardiology",
+    "sub_specialty": "Radial Angioplasty",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 15,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "critical_surgeries_summary": "Dr. Ghogare has achieved proficiency in coronary angiographies and angioplasties using radial approach. Performed more than 3,500 angiographies and over 500 angioplasties primarily through radial route. Expert in this highly skilled technique involving hand vessel access, demonstrating exceptional expertise in minimally invasive cardiac procedures.",
+    "special_interests_and_expertise": "Pioneer in radial approach angioplasty. Expert in minimally invasive cardiac interventions."
+  },
+  {
+    "doctor_id": "DOC-IND-064",
+    "name": "Dr. Manjinder Singh Sandhu",
+    "primary_specialty": "Cardiology",
+    "sub_specialty": "Interventional Cardiology",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Artemis Hospital",
+    "years_of_experience": 27,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Punjabi"
+    ],
+    "critical_surgeries_summary": "Dr. Sandhu has practice of over 27+ years and is one of most experienced cardiologists in India. Has honor of being accompanying Cardiologist to The President of India on tours. Completed Masters and MBBS from AFMC Pune, DNB & DM from PGIMER Chandigarh. Expert in complex angioplasties and device placements.",
+    "special_interests_and_expertise": "Cardiologist to President of India. Expert in complex multi-vessel angioplasties."
+  },
+  {
+    "doctor_id": "DOC-IND-065",
+    "name": "Dr. Robert Mao",
+    "primary_specialty": "Cardiology",
+    "sub_specialty": "Interventional Cardiology",
+    "location": "New Delhi",
+    "hospital_affiliation": "Max Hospital",
+    "years_of_experience": 47,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Mao is highly respected Interventional Cardiologist with over 47 years of experience. Has performed thousands of complex cardiac interventions including high-risk angioplasties. Expert in treating complex coronary artery disease with innovative techniques. Extensive experience in structural heart interventions.",
+    "special_interests_and_expertise": "Expert in high-risk coronary interventions. Specializes in structural heart disease treatments."
+  },
+  {
+    "doctor_id": "DOC-IND-066",
+    "name": "Dr. Suresh Joshi",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Minimally Invasive Heart Surgery",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 35,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "critical_surgeries_summary": "Dr. Joshi received 'Medical Excellence of Cardiac Surgery in India' from Harvard University International, USA. Pioneer in minimally invasive heart surgery with over 15,000 cardiac, thoracic, and vascular procedures. Recipient of Dr. PK Sen Oration from Indian Association of Cardiovascular and Thoracic Surgeons. Fellowship training from Leipzig Heart Centre, Germany.",
+    "special_interests_and_expertise": "Pioneer in minimally invasive cardiac surgery in India. Harvard recognized excellence in cardiac surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-067",
+    "name": "Dr. Sushant Srivastava",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Complex Aortic Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "BLK Hospital",
+    "years_of_experience": 22,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Srivastava trained in USA for cardiac surgeries, practicing for 22 years with superb prognoses. Regular performer of Open Heart Surgeries both on-pump and off-pump. Expert in Valve replacement surgeries. Has had patients from USA for complex surgeries like Abdominal Aortic Aneurysm repair. Expertise in CABG and complex aortic procedures.",
+    "special_interests_and_expertise": "Expert in complex aortic aneurysm repairs. Specializes in valve replacement surgeries."
+  },
+  {
+    "doctor_id": "DOC-IND-068",
+    "name": "Dr. Manoj Phatak",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Hybrid Aortic Surgery",
+    "location": "Kochi, Kerala",
+    "hospital_affiliation": "Aster Medicity",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Malayalam"
+    ],
+    "critical_surgeries_summary": "Dr. Phatak has experience in over 11,000 cardiac surgeries including CABGs, Valve replacements, Valve repairs, Lung Resections, and Aortic Aneurysms. Pioneer who developed Hybrid Aortic Aneurysm Surgery in India. Extensive expertise in complex cardiac and thoracic procedures with excellent outcomes.",
+    "special_interests_and_expertise": "Pioneer of Hybrid Aortic Aneurysm Surgery in India. Expert in complex valve repairs."
+  },
+  {
+    "doctor_id": "DOC-IND-069",
+    "name": "Dr. Sanjay Koshi",
+    "primary_specialty": "Pediatric Cardiac Surgery",
+    "sub_specialty": "Congenital Heart Surgery",
+    "location": "Kochi, Kerala",
+    "hospital_affiliation": "Aster Hospital",
+    "years_of_experience": 15,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Malayalam"
+    ],
+    "critical_surgeries_summary": "Dr. Koshi has over 15 years experience doing Heart Surgeries for children. One of most acclaimed Pediatric Cardiac Surgeons in India. Has performed over 8,000 pediatric cardiac procedures. Expert in complex congenital heart defect repairs with excellent surgical outcomes.",
+    "special_interests_and_expertise": "Expert in complex congenital heart surgery. Specializes in neonatal cardiac procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-070",
+    "name": "Dr. Hemant Pathare",
+    "primary_specialty": "Cardiac Surgery",
+    "sub_specialty": "Heart and Lung Surgery",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Nanavati Super Specialty Hospital",
+    "years_of_experience": 30,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "critical_surgeries_summary": "Dr. Pathare is exceptional cardiovascular heart and lung surgeon offering services for complex cardiac disorders. Lifetime member of prestigious associations including Indian Association of Cardiac Surgeons, Indian Vascular Society. International membership of Cardiac Surgery Brisbane Australia. Expert in complex cardiac and thoracic procedures.",
+    "special_interests_and_expertise": "Expert in combined heart and lung surgeries. International recognition in cardiac surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-071",
+    "name": "Dr. Rahul Bhargava",
+    "primary_specialty": "Hematology",
+    "sub_specialty": "Bone Marrow Transplant",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital",
+    "years_of_experience": 15,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Bhargava is renowned bone marrow transplant surgeon with over 15 years experience. Specializes in Haemato-oncology, Paediatric Haematology, and Stem Cell Transplant. Team has conducted over 1,000 transplants, most BMTs in North India. First in India to perform stem cell transplant for Multiple Sclerosis. Pioneer establishing 6 low-cost medical centers.",
+    "special_interests_and_expertise": "Pioneer in stem cell transplant for Multiple Sclerosis. Leading BMT surgeon in North India."
+  },
+  {
+    "doctor_id": "DOC-IND-072",
+    "name": "Dr. Mandeep Singh Malhotra",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "Head, Neck and Breast Oncology",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital",
+    "years_of_experience": 20,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Malhotra is renowned cancer surgeon with expertise in Head, Neck and Breast oncology. Extensive experience in oncoplastic breast conservation surgery, autologous primary breast reconstruction. First risk-reducing breast cancer surgery with autologous reconstruction for BRCA-positive patient in North India. First nipple sparing mastectomy with primary reconstruction using DIEP flap in North India.",
+    "special_interests_and_expertise": "Pioneer in oncoplastic breast conservation. Expert in autologous breast reconstruction."
+  },
+  {
+    "doctor_id": "DOC-IND-073",
+    "name": "Dr. Anil Kamath",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "Peritoneal Surface Malignancies",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "critical_surgeries_summary": "Dr. Kamath has rich experience in surgical oncology working in reputed hospitals in India and abroad. Recipient of UICC-ICRETT fellowship from Washington Cancer Center for training in radical peritonectomy and intraperitoneal chemotherapy. Expert in management of all cancers including Breast, Head and Neck, Gastrointestinal Thoracic, and Urological cancers.",
+    "special_interests_and_expertise": "Expert in peritoneal surface malignancies. Specializes in HIPEC procedures."
+  },
+  {
+    "doctor_id": "DOC-IND-074",
+    "name": "Dr. Kapil Kumar",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "Gastrointestinal Oncology",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Hospital",
+    "years_of_experience": 30,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Kumar is senior surgical oncologist serving as Director and Head of Surgical Oncology at Fortis Hospital. Previously worked with premier facilities including Rajiv Gandhi Cancer Institute, Dharamshila Cancer Hospital, Tata Memorial Cancer hospital. Member of International Society of Diseases of Esophagus and Indian Society of Oncology.",
+    "special_interests_and_expertise": "Expert in gastrointestinal oncology. Specializes in esophageal cancer surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-075",
+    "name": "Dr. Niranjan Naik",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "GI, Thoracic & Head Neck Cancer",
+    "location": "New Delhi",
+    "hospital_affiliation": "Fortis Memorial Research Institute",
+    "years_of_experience": 27,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Naik has performed over 12,500 onco-surgical operations since 1996. Considered one of best GI, Thoracic & Head and Neck Cancer Surgeons in India. Successfully performed numerous complex onco-surgical operations including laparoscopic and thoracoscopic procedures. Expert in diagnostic and therapeutic endoscopic procedures.",
+    "special_interests_and_expertise": "Expert in complex GI and thoracic oncology. Pioneer in laparoscopic cancer surgery."
+  },
+  {
+    "doctor_id": "DOC-IND-076",
+    "name": "Dr. Vikram Pratap Singh",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "Complex Cancer Surgery",
+    "location": "New Delhi",
+    "hospital_affiliation": "Apollo Hospital",
+    "years_of_experience": 50,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Singh has 50 years of experience as leading surgical oncologist. Expert in removing tumors of bile duct, bladder, bone, breast, and cervical cancers. Founding member of Indian Society of Oncology. Extensive experience in complex cancer surgeries with exceptional outcomes throughout five decades of practice.",
+    "special_interests_and_expertise": "Founding member of Indian Society of Oncology. Expert in complex multi-organ cancer surgeries."
+  },
+  {
+    "doctor_id": "DOC-IND-077",
+    "name": "Dr. Rajasundaram",
+    "primary_specialty": "Surgical Oncology",
+    "sub_specialty": "HIPEC Surgery",
+    "location": "Chennai, Tamil Nadu",
+    "hospital_affiliation": "Gleneagles Global Health City",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "critical_surgeries_summary": "Dr. Rajasundaram established Gleneagles Chennai as one of top hosts in world for HIPEC (hyperthermic intraperitoneal chemotherapy) and total cytoreductive surgery (CCRS). GI cancer specialist with numerous research papers in peer-reviewed journals. Lifetime membership of AROI, ASI, IASO, ISO, ESMO, and OGSSI.",
+    "special_interests_and_expertise": "Pioneer in HIPEC and cytoreductive surgery. Expert in advanced peritoneal malignancies."
+  },
+  {
+    "doctor_id": "DOC-IND-078",
+    "name": "Dr. Sohan Singh Sankhla",
+    "primary_specialty": "Orthopedic Surgery",
+    "sub_specialty": "Joint Replacement",
+    "location": "Jaipur, Rajasthan",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 50,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Rajasthani"
+    ],
+    "critical_surgeries_summary": "Dr. Sankhla is veteran spine surgeon with around half century in the field. Renowned member of Indian Spine Surgeon Association. Significant experience as orthopedic surgeon focusing on joint replacement surgery. Over 30 publications in renowned research journals. Recipient of Shiksha Vibhushan Award and Best Citizen of India.",
+    "special_interests_and_expertise": "Veteran in spine and joint replacement surgery. Award-winning orthopedic surgeon."
+  },
+  {
+    "doctor_id": "DOC-IND-079",
+    "name": "Dr. Vikas Gupte",
+    "primary_specialty": "Spine Surgery",
+    "sub_specialty": "Cervical Spine Surgery",
+    "location": "Mumbai, Maharashtra",
+    "hospital_affiliation": "Multiple Hospitals",
+    "years_of_experience": 25,
+    "language_fluency": [
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "critical_surgeries_summary": "Dr. Gupte is popular name among spine specialists in India, well known for proficiency in complex spine surgeries. Area of expertise in treating degenerative spine disorders and cervical spine surgery. Has performed numerous complex spine procedures with focus on minimally invasive techniques and excellent outcomes.",
+    "special_interests_and_expertise": "Expert in cervical spine surgery. Specializes in degenerative spine disorders."
+  },
+  {
+    "doctor_id": "DOC-IND-080",
+    "name": "Dr. Praveen Gupta",
+    "primary_specialty": "Neurology",
+    "sub_specialty": "Deep Brain Stimulation",
+    "location": "Gurgaon, Haryana",
+    "hospital_affiliation": "Fortis Memorial Research Institute",
+    "years_of_experience": 17,
+    "language_fluency": [
+      "English",
+      "Hindi"
+    ],
+    "critical_surgeries_summary": "Dr. Gupta is Head of Department for Neurology at Fortis Gurgaon. Expertise in exploring innovative techniques for established neurology practices. Primary achievement is bringing DBS (Deep Brain Stimulation) techniques to forefront of spine surgery in India. Expert in movement disorders and neurodegenerative diseases.",
+    "special_interests_and_expertise": "Pioneer in DBS techniques in India. Expert in movement disorders treatment."
+  }
+]

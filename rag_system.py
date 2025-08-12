@@ -346,11 +346,11 @@ def main():
     test_queries = [
         {
             "query": "I've been having severe chest pain and shortness of breath, especially when climbing stairs. I have a history of high blood pressure.",
-            "location": "New York, NY"
+            "location": "New Delhi"
         },
         {
             "query": "My 5-year-old daughter has recurring ear infections and hearing problems. We need someone who is good with children.",
-            "location": "Boston, MA"
+            "location": "Mumbai, Maharashtra"
         },
         {
             "query": "I have a heart attack and need a doctor who can help me",

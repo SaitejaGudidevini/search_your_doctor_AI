@@ -196,7 +196,7 @@ def main():
     pipeline = DoctorEmbeddingPipeline()
     
     # Process doctors data
-    doctors_file = "doctors_data.json"
+    doctors_file = "indian_doctors_dataset.json"
     if not os.path.exists(doctors_file):
         print(f"Error: {doctors_file} not found. Please run generate_doctor_data.py first.")
         return
@@ -210,7 +210,7 @@ def main():
     print("="*50)
     
     test_queries = [
-        "cardiologist in New York with experience in heart surgery",
+        "I want to see a doctor in New Delhi",
         "pediatric specialist who speaks Spanish",
         "neurologist experienced in epilepsy treatment",
         "cancer specialist in Boston",
